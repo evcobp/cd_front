@@ -1,16 +1,34 @@
-function sigma() {
-    x = 20;
-    var sum = 0;
-    for (x = 1; x < 20; x++) {
-        sum = (x + 1) + sum;
-        return sum;
+//Recursive Sigma
+function rSigma(num) {
+    if(num > 0) {
+        return rSigma(num-1) + num;
     }
+    return 0;
 }
 
-function factorial() {
-    var fact = 5;
-    for (i = 1; i < fact; i++) {
-        n = (i * i++) * n;
-        return n;
+//My original code
+    var sum = 0;
+    while(num < 20) {
+        var prevVal = rSigma(num+1);
+        sum = prevVal + num;
+        return sum;
     }
+
+//Recursive Factorial
+function rFact(num) {
+    if (num > 1) {
+        return rFact(num-1) * num;
+    }
+    return 1; 
 }
+
+//My original code
+function rFact(num) {
+    if (num < 0) {
+        num = 0;
+    }
+        if(num > 1) {
+            return rFact(num-1) * num;
+        }
+        return 1;
+    }

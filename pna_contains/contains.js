@@ -1,11 +1,13 @@
 class SLL {
     // constructor, other methods, removed for brevity
-    contains(value) {
-     this.head.contains(value);
-        if (this.head.next === value){
-            return True;
-        }
-        return false;
-    	// is "value" to be found anywhere in this list?
+     contains(value) {
+        var currentNode = this.head;
+        while(currentNode !== null) {
+            if(value === currentNode.data) {
+            return true;
+         }
+         currentNode = currentNode.next;
+     }
+     return false;
     }
  }

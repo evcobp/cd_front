@@ -4,7 +4,7 @@ class SLL {
         this.head = null;
     }
     addFront(value) {
-        var newNode = newNode(value);
+        var newNode = new Node(value);
         this.head.next = this.head;
         this.head = newNode;
             return this.head;

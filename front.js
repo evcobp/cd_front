@@ -3,7 +3,7 @@ class SLL {
         this.head = null;
     }
     front() {
-        var newNode = newNode(value);
+        var newNode = new Node(value);
         newNode.shift(value);
         newNode.next = this.head;
         this.head = newNode;
